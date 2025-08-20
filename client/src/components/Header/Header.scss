@@ -1,4 +1,4 @@
-@import "variables";
+@use "../../styles/variables" as *;
 .main-header {
   width: 100%;
   position: fixed;

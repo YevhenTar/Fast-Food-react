@@ -1,4 +1,8 @@
 import {useEffect} from "react";
+import Loader from "./components/Loader/Loader.tsx";
+import Header from "./components/Header/Header.tsx";
+import HomeSection from "./components/HomeSection/HomeSection.tsx";
+
 
 function App() {
   useEffect(() => {
@@ -23,77 +27,11 @@ function App() {
 
   return (
       <>
-        <div className="preloader">
-          <div className="preloader__wrap">
-            <div className="pl1">
-              <div className="pl1__a"></div>
-              <div className="pl1__b"></div>
-              <div className="pl1__c"></div>
-            </div>
-          </div>
-        </div>
+        <Loader />
         <div className="wrapper">
-          <header className="main-header lock-padding">
-            <div className="container">
-              <div className="row">
-                <div className="col">
-                  <div className="main-header__wrap">
-                    <a href="#" className="logo-link">
-                      <img src="assets/img/header/1.png" alt="logo" className="logo-image"/>
-                    </a>
-                    <nav className="menu">
-                      <ul className="menu-list">
-                        <li className="menu-list__item"><a href="#blog-point" className="menu-list__link">Blog</a></li>
-                        <li className="menu-list__item"><a href="#our-offer-point" className="menu-list__link">Our
-                          offer</a></li>
-                        <li className="menu-list__item"><a href="#partners-point"
-                                                           className="menu-list__link">Partners</a></li>
-                        <li className="menu-list__item"><a href="#reviews-point" className="menu-list__link">Reviews</a>
-                        </li>
-                      </ul>
-                    </nav>
-                    <a href="#popup_order" className="button main-header__button popup-link">Order now</a>
-                    <div className="burger-menu" aria-expanded="false" aria-controls="">
-                      <div className="burger-menu__line burger-menu__line_top"></div>
-                      <div className="burger-menu__line burger-menu__line_middle"></div>
-                      <div className="burger-menu__line burger-menu__line_bottom"></div>
-                    </div>
-                    <div className="hidden-menu">
-                      <ul className="hidden-menu__list">
-                        <li className="hidden-menu__item"><a href="#blog-point" className="hidden-menu__link">Blog</a>
-                        </li>
-                        <li className="hidden-menu__item"><a href="#our-offer-point" className="hidden-menu__link">Our
-                          offer</a></li>
-                        <li className="hidden-menu__item"><a href="#partners-point"
-                                                             className="hidden-menu__link">Partners</a></li>
-                        <li className="hidden-menu__item"><a href="#reviews-point"
-                                                             className="hidden-menu__link">Reviews</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </header>
+          <Header />
           <main className="main-content">
-            <section className="home-section">
-              <div className="container">
-                <div className="row">
-                  <div className="col-xxl-6 col-xl-6 col-lg-7 col-md-9 col-sm-11 col-12">
-                    <div className="home-block">
-                      <h1 className="home-block__headline">FAST FOOD BURGERS</h1>
-                      <h2 className="home-block__subheadline">The fastest food, for instant hunger.</h2>
-                      <p className="home-block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                        recusandae ratione rerum cumque alias minus deleniti, quam, magnam dolore unde vel, eligendi
-                        nulla molestias numquam. Enim, cum porro?</p>
-                      <div className="home-block__button-wrap">
-                        <a href="#popup_order" className="button popup-link">Order now</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+            <HomeSection />
             <section className="dishes-section" id="blog-point">
               <div className="container">
                 <div className="row">

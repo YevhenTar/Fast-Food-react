@@ -1,63 +1,21 @@
-# Client
+Client
 
-React + TypeScript + Vite
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript project using Vite.
 
-Currently, two official plugins are available:
+Setup Overview
 
-@vitejs/plugin-react uses Babel for Fast Refresh
-@vitejs/plugin-react-swc uses SWC for Fast Refresh
-Expanding the ESLint configuration
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Minimal template for quick start with Hot Module Replacement (HMR) and basic ESLint rules.
 
-export default tseslint.config([
-globalIgnores(['dist']),
-{
-files: ['**/*.{ts,tsx}'],
-extends: [
-// Other configs...
+Two official React plugins for Vite are available:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+@vitejs/plugin-react (Babel-based)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-},
-])
-You can also install eslint-plugin-react-x and eslint-plugin-react-dom for React-specific lint rules:
+@vitejs/plugin-react-swc (SWC-based)
 
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+ESLint Recommendations
 
-export default tseslint.config([
-globalIgnores(['dist']),
-{
-files: ['**/*.{ts,tsx}'],
-extends: [
-// Other configs...
-// Enable lint rules for React
-reactX.configs['recommended-typescript'],
-// Enable lint rules for React DOM
-reactDom.configs.recommended,
-],
-languageOptions: {
-parserOptions: {
-project: ['./tsconfig.node.json', './tsconfig.app.json'],
-tsconfigRootDir: import.meta.dirname,
-},
-// other options...
-},
-},
-])
+For production development, we recommend using extended ESLint rules with type-aware checks.
+
+You can choose between standard, strict, and stylistic rule sets.
+
+Additionally, install eslint-plugin-react-x and eslint-plugin-react-dom plugins for more precise React-specific linting.

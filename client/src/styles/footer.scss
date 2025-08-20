@@ -1,4 +1,4 @@
-@import "variables.scss";
+@use './variables' as *;
 .main-footer {
   padding: 70px 0 100px;
 }
