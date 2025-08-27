@@ -1,29 +1,66 @@
 
 import "./Header.scss";
-import logo from '../../assets/img/header/1.png'; // путь от текущего файла
+import logo from '../../assets/img/header/1.png';
+import {useState, useEffect} from "react"; // путь от текущего файла
 
 const Header = () => {
+    const [isSticky, setIsSticky] = useState(false);
 
+    // Следим за скроллом окна
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsSticky(window.scrollY >= 10);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    // Плавный скролл к секции
+    const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, targetId?: string) => {
+        e.preventDefault();
+        if (targetId) {
+            const el = document.querySelector(targetId);
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+            }
+        } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    };
 
     return (
-        <header className="main-header lock-padding">
+        <header className={`main-header lock-padding ${isSticky ? "stickytop" : ""}`}>
             <div className="container">
                 <div className="main-header__wrap">
-                    <a href="#" className="logo-link">
+                    <a href="/" className="logo-link" onClick={(e) => handleScrollTo(e)}>
                         <img src={logo} alt="logo" className="logo-image"/>
                     </a>
                     <nav className="menu">
                         <ul className="menu-list">
-                            <li className="menu-list__item"><a href="#blog-point"
-                                                               className="menu-list__link ">Blog</a>
+                            <li className="menu-list__item">
+                                <a href="#blog-point"
+                                   className="menu-list__link "
+                                   onClick={(e) => handleScrollTo(e, "#blog-point")}
+                                >Blog</a>
                             </li>
-                            <li className="menu-list__item"><a href="#our-offer-point"
-                                                               className="menu-list__link">Our
-                                offer</a></li>
-                            <li className="menu-list__item"><a href="#partners-point"
-                                                               className="menu-list__link">Partners</a></li>
-                            <li className="menu-list__item"><a href="#reviews-point"
-                                                               className="menu-list__link">Reviews</a>
+                            <li className="menu-list__item">
+                                <a href="#our-offer-point"
+                                   className="menu-list__link"
+                                   onClick={(e) => handleScrollTo(e, "#our-offer-point")}
+                                >Our offer</a>
+                            </li>
+                            <li className="menu-list__item">
+                                <a href="#partners-point"
+                                   className="menu-list__link"
+                                   onClick={(e) => handleScrollTo(e, "#partners-point")}
+                                >Partners</a>
+                            </li>
+                            <li className="menu-list__item">
+                                <a href="#reviews-point"
+                                   className="menu-list__link"
+                                   onClick={(e) => handleScrollTo(e, "#reviews-point")}
+                                >Reviews</a>
                             </li>
                         </ul>
                     </nav>
@@ -35,16 +72,30 @@ const Header = () => {
                     </div>
                     <div className="hidden-menu">
                         <ul className="hidden-menu__list">
-                            <li className="hidden-menu__item"><a href="#blog-point"
-                                                                 className="hidden-menu__link">Blog</a>
+                            <li className="hidden-menu__item">
+                                <a href="#blog-point"
+                                    className="hidden-menu__link"
+                                   onClick={(e) => handleScrollTo(e, "#blog-point")}
+                                >Blog</a>
                             </li>
-                            <li className="hidden-menu__item"><a href="#our-offer-point"
-                                                                 className="hidden-menu__link">Our
-                                offer</a></li>
-                            <li className="hidden-menu__item"><a href="#partners-point"
-                                                                 className="hidden-menu__link">Partners</a></li>
-                            <li className="hidden-menu__item"><a href="#reviews-point"
-                                                                 className="hidden-menu__link">Reviews</a></li>
+                            <li className="hidden-menu__item">
+                                <a href="#our-offer-point"
+                                    className="hidden-menu__link"
+                                   onClick={(e) => handleScrollTo(e, "#our-offer-point")}
+                                >Our offer</a>
+                            </li>
+                            <li className="hidden-menu__item">
+                                <a href="#partners-point"
+                                    className="hidden-menu__link"
+                                   onClick={(e) => handleScrollTo(e, "#partners-point")}
+                                >Partners</a>
+                            </li>
+                            <li className="hidden-menu__item">
+                                <a href="#reviews-point"
+                                    className="hidden-menu__link"
+                                   onClick={(e) => handleScrollTo(e, "#reviews-point")}
+                                >Reviews</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

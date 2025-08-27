@@ -1,4 +1,6 @@
 import {useEffect} from "react";
+import ScrollOut from "scroll-out";
+import type { ScrollOutInstance } from "scroll-out";
 import Loader from "./components/Loader/Loader.tsx";
 import Header from "./components/Header/Header.tsx";
 import HomeSection from "./components/HomeSection/HomeSection.tsx";
@@ -32,6 +34,18 @@ function App() {
     return () => {
       window.removeEventListener('load', onLoad);
     };
+  }, []);
+
+  useEffect(() => {
+    const so: ScrollOutInstance = ScrollOut({
+      targets: ".scroll-animate",
+      once: true,
+      onShown(el) {
+        el.classList.add("new-animate");
+      },
+    });
+
+    return () => so.teardown();
   }, []);
 
   return (
