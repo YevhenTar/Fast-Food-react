@@ -3,12 +3,19 @@
   @media(max-width: 1199.98px){
     padding: 110px 0 65px;
   }
+  &__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 .proposal-block {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  flex: 1 1 calc(50% - 30px);
   padding: 65px 25px 65px 50px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,14 +33,14 @@
   }
   &_dairy-queen {
     background-image: url("../../assets/img/proposals-section/dairy-queen.png");
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
     justify-content: flex-end;
     transform: translateX(-200px);
     transition-delay: 0.3s;
   }
   &_pizza-hut {
     background-image: url("../../assets/img/proposals-section/pizza-hut.png");
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
     transform: translateX(200px);
     transition-delay: 0.6s;
   }
