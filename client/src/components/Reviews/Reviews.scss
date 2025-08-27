@@ -3,8 +3,15 @@
   @media(max-width: 575.98px){
     padding: 0 0 100px;
   }
+  &__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .picture-block{
+  flex: 1 0 50%;
   opacity: 0;
   transform: translateY(200px);
   transition: opacity 0.8s, transform 0.9s;
@@ -20,6 +27,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
   @media(max-width: 575.98px){
     transform: scale(0.82);
   }
@@ -111,9 +119,10 @@
   }
 }
 .text-wrap {
+  flex: 1 0 50%;
   text-align: center;
-  padding-top: 95px;
-  width: 58%;
+  //padding-top: 95px;
+  //width: 38%;
   margin: 0 auto;
   opacity: 0;
   transform: translateY(200px);
@@ -126,6 +135,10 @@
   @media(max-width: 575.98px){
     padding-top: 55px;
     width: 80%;
+  }
+  &__service-block{
+    width: 58%;
+    margin: 0 auto;
   }
   &__quotes {
     margin-bottom: 40px;
