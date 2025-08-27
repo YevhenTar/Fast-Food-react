@@ -4,6 +4,11 @@
   @media (max-width: 575.98px){
     padding: 60px 0 70px;
   }
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .main-proposal-block {
   display: flex;
