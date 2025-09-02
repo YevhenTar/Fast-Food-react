@@ -62,6 +62,12 @@ const Header = () => {
                                    onClick={(e) => handleScrollTo(e, "#reviews-point")}
                                 >Reviews</a>
                             </li>
+                            <li className="menu-list__item">
+                                <a href="#footer-point"
+                                   className="menu-list__link"
+                                   onClick={(e) => handleScrollTo(e, "#footer-point")}
+                                >Support</a>
+                            </li>
                         </ul>
                     </nav>
                     <a href="#popup_order" className="button main-header__button popup-link">Order now</a>

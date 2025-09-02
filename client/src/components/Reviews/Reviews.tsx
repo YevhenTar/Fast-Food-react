@@ -38,7 +38,6 @@ const Reviews = () => {
                             Excellence
                             taste in Every Bite.Add a joy of best Taste. Foodie Moments.</p>
                         <p className="text-wrap__name">Adele A. McNeill</p>
-                        <p className="text-wrap__company">Amirican</p>
                     </div>
                 </div>
             </div>

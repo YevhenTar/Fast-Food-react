@@ -5,12 +5,10 @@ import Loader from "./components/Loader/Loader.tsx";
 import Header from "./components/Header/Header.tsx";
 import HomeSection from "./components/HomeSection/HomeSection.tsx";
 import DishesSection from "./components/DishesSection/DishesSection.tsx";
-import MainProposalSectoin from "./components/MainProposalSectoin/MainProposalSectoin.tsx";
+import MainProposalSection from "./components/MainProposalSectoin/MainProposalSectoin.tsx";
 import Proposals from "./components/Proposals/Proposals.tsx";
 import Reviews from "./components/Reviews/Reviews.tsx";
-import DownloadSection from "./components/DownloadSection/DownloadSection.tsx";
 import PopupOrder from "./components/Popups/PopupOrder/PopupOrder.tsx";
-import PopupDownload from "./components/Popups/PopupDownload/PopupDownload.tsx";
 import Footer from "./components/Footer/Footer.tsx";
 
 
@@ -56,14 +54,12 @@ function App() {
           <main className="main-content">
             <HomeSection />
             <DishesSection />
-            <MainProposalSectoin />
+            <MainProposalSection />
             <Proposals />
             <Reviews />
-            <DownloadSection />
           </main>
           <Footer />
           <PopupOrder />
-          <PopupDownload />
         </div>
       </>
   )
