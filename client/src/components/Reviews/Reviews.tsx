@@ -19,7 +19,7 @@ const Reviews = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             gsap.to(rotationAngle.current, {
-                angle: 360,
+                angle: -360,
                 duration: 20,
                 repeat: -1,
                 ease: 'none',

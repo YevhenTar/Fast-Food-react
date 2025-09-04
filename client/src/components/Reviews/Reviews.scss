@@ -35,20 +35,9 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    object-fit: cover;  // картинка заполняет обёртку без искажений
+    object-fit: cover;
     cursor: default;
     opacity: 1;
-    //position: absolute;
-    //top: 50%;
-    //left: 50%;
-    //width: 90px;  // больше, чем у круговых
-    //height: 90px;
-    //border-radius: 50%;
-    //object-fit: cover;
-    //transform: translate(-50%, -50%);
-    //z-index: 2;
-    //cursor: default;
-
   }
   &__image {
     position: absolute;
@@ -62,32 +51,6 @@
       transform: translate(-50%, -50%);
       animation: around-other-way 30s linear infinite;
     }
-
-    //&_lady-one {
-    //  top: 50%;
-    //  left: 50%;
-    //  transform: translate(-50%, -50%);
-    //}
-    //&_lady-two {
-    //  // top: calc(50% - 186px);
-    //  // left: calc(50% + 54px);
-    //  animation: orbit-1 20s linear infinite;
-    //}
-    //&_lady-three {
-    //  // top: calc(50% + 45px);
-    //  // left: calc(50% + 105px);
-    //  animation: orbit-2 20s linear infinite;
-    //}
-    //&_man-one {
-    //  // top: calc(50% + 100px);
-    //  // left: calc(50% - 127px);
-    //  animation: orbit-3 20s linear infinite;
-    //}
-    //&_man-two {
-    //  // top: calc(50% - 135px);
-    //  // left: calc(50% - 190px);
-    //  animation: orbit-4 20s linear infinite;
-    //}
     @keyframes around{
       0% {
         transform: rotate(0deg);
@@ -104,45 +67,11 @@
         transform: translate(-50%, -50%) rotate(360deg);
       }
     }
-    //@keyframes orbit-1{
-    //  0% {
-    //    transform: rotate(0deg) translate(115px, -125px) rotate(0deg);
-    //  }
-    //  100% {
-    //    transform: rotate(-360deg) translate(115px, -125px) rotate(360deg);
-    //  }
-    //}
-    //@keyframes orbit-2{
-    //  0% {
-    //    transform: rotate(0deg) translate(115px, 130px) rotate(0deg);
-    //  }
-    //  100% {
-    //    transform: rotate(-360deg) translate(115px, 130px) rotate(360deg);
-    //  }
-    //}
-    //@keyframes orbit-3{
-    //  0% {
-    //    transform: rotate(0deg) translate(-115px, -125px) rotate(0deg);
-    //  }
-    //  100% {
-    //    transform: rotate(-360deg) translate(-115px, -125px) rotate(360deg);
-    //  }
-    //}
-    //@keyframes orbit-4{
-    //  0% {
-    //    transform: rotate(0deg) translate(-115px, 125px) rotate(0deg);
-    //  }
-    //  100% {
-    //    transform: rotate(-360deg) translate(-115px, 125px) rotate(360deg);
-    //  }
-    //}
   }
 }
 .text-wrap {
   flex: 1 0 50%;
   text-align: center;
-  //padding-top: 95px;
-  //width: 38%;
   margin: 0 auto;
   opacity: 0;
   transform: translateY(200px);
@@ -159,7 +88,6 @@
   &__service-block{
     width: 58%;
     margin: 0 auto;
-    //transition: opacity 0.3s ease;
   }
   &__quotes {
     margin-bottom: 40px;
@@ -197,8 +125,6 @@
   position: absolute;
   width: 348px;
   height: 348px;
-  //top: 0;
-  //left: 0;
   transform-origin: center center;
   pointer-events: none;
 }
@@ -211,42 +137,29 @@
   transform-origin: center center;
 }
 
-// Расположение элементов по окружности
 .orbit-item-0 {
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.orbit-item-1 {
-  top: 50%;
-  left: 76%;
-  transform: translate(-50%, -50%);
-}
-.orbit-item-2 {
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.orbit-item-3 {
-  top: 50%;
-  left: 24%;
-  transform: translate(-50%, -50%);
+  top: -27px;
+  left: calc(50% - 27px);
+  transform: translate(-50%, 0);
 }
 
-//.orbit-item-image {
-//  width: 90px;     // единый размер для всех
-//  height: 90px;
-//  border-radius: 50%;
-//  object-fit: cover;
-//  opacity: 0.6;
-//  transition: transform 0.3s, opacity 0.3s;
-//  cursor: pointer;
-//
-//  &:hover {
-//    transform: scale(1.05);
-//    opacity: 1;
-//  }
-//}
+.orbit-item-1 {
+  top: calc(50% - 27px);
+  left: calc(100% - 37px);
+  transform: translate(-50%, 0); // центр справа
+}
+
+.orbit-item-2 {
+  top: calc(100% - 27px);
+  left: calc(50% - 27px);
+  transform: translate(-50%, 0); // центр снизу
+}
+
+.orbit-item-3 {
+  top: calc(50% - 27px);
+  left: -27px;
+  transform: translate(0, 0); // центр слева
+}
 
 .orbit-item-image {
   width: 100%;
@@ -265,8 +178,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100px;   // фиксированный размер центра
-  height: 100px;
+  width: 110px;   // фиксированный размер центра
+  height: 110px;
   border-radius: 50%;
   overflow: hidden; // обрезка, чтобы круг был аккуратный
   transform: translate(-50%, -50%);
