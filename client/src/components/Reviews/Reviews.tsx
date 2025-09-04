@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import {  useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import './Reviews.scss';
 import bigCircle from '../../assets/img/reviews-section/big-circle.svg';
@@ -69,13 +69,14 @@ const Reviews = () => {
                              className="picture-wrap__image picture-wrap__image_small-circle"/>
 
                         {/* Центральное фото */}
-                        <img
-                            src={centerPerson.photo}
-                            alt={centerPerson.name}
-                            className="picture-wrap__image picture-wrap__image_center"
-                            style={{ zIndex: 2 }}
-                        />
-
+                        <div className="center-photo-wrapper">
+                            <img
+                                src={centerPerson.photo}
+                                alt={centerPerson.name}
+                                className="picture-wrap__image_center"
+                                style={{ zIndex: 2 }}
+                            />
+                        </div>
                         {/* Вращающийся контейнер с компенсирующей обёрткой */}
                         <div className="orbit-container" ref={orbitRef}>
                             {circlePeople.map((person, i) => (
