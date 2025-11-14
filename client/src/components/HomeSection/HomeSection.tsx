@@ -1,6 +1,19 @@
 import "./HomeSection.scss";
 
 const HomeSection = () => {
+    // Плавный скролл к секции
+    const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, targetId?: string) => {
+        e.preventDefault();
+        if (targetId) {
+            const el = document.querySelector(targetId);
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+            }
+        } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    };
+
     return (
         <section className="home-section">
             <div className="container">
@@ -13,7 +26,11 @@ const HomeSection = () => {
                         eligendi
                         nulla molestias numquam. Enim, cum porro?</p>
                     <div className="home-block__button-wrap">
-                        <a href="#popup_order" className="button popup-link">Order now</a>
+                        <a 
+                            href="#popup_order" 
+                            className="button popup-link"
+                            onClick={(e) => handleScrollTo(e, "#blog-point")}
+                        >Order now</a>
                     </div>
                 </div>
             </div>
