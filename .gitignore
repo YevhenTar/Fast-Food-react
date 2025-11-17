@@ -1,0 +1,33 @@
+# === IDE and Editor files ===
+.idea/
+.vscode/
+!.vscode/extensions.json
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.iml
+
+# === Log files ===
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# === Build output (Client only) ===
+/client/dist/
+/client/dist-ssr/
+/client/.vite/
+
+# === Local environment files ===
+*.local
+
+# === Node modules ===
+/client/node_modules/
+/server/node_modules/
+node_modules/
