@@ -16,10 +16,10 @@ const Footer = () => {
                                  className="logo-image contacts-block__logo-image"/>
                         </a>
                         <div className="contacts contacts-block__contacts">
-                            <a href="mailto:fastfood_usa@gmail.com"
-                               className="contacts-block__link contacts-block__link_email">fastfood_usa@gmail.com</a>
-                            <a href="www.fastfood_usa.com"
-                               className="contacts-block__link contacts-block__link_site"> www.fastfood_usa.com</a>
+                            <a href="mailto:example_email@gmail.com"
+                               className="contacts-block__link contacts-block__link_email">example_email@gmail.com</a>
+                            <a href="/"
+                               className="contacts-block__link contacts-block__link_site">www.fastfood_usa.com</a>
                         </div>
                     </div>
                     <div className="footer-menu">
