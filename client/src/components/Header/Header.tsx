@@ -2,6 +2,7 @@
 import "./Header.scss";
 import logo from '../../assets/img/header/1.png';
 import {useState, useEffect, useRef} from "react"; 
+import BasketButton from "../BasketButton/BasketButton";
 
 const Header = () => {
     const [isSticky, setIsSticky] = useState(false);
@@ -127,27 +128,28 @@ const Header = () => {
                             </li>
                         </ul>
                     </nav>
-
-                    {/* MAIN BUTTON */}
-                    <a 
-                        href="#blog-point" 
-                        className="button main-header__button popup-link"
-                        onClick={(e) => handleHeaderMenuItem(e, "#blog-point")}
-                    >Order now</a>
-
-                    {/* BURGER BUTTON */}
-                    <div
-                        ref={burgerRef}
-                        className={`burger-menu ${isBurgerMenuOpen ? "open" : "close"}`}
-                        aria-expanded={isBurgerMenuOpen}
-                        aria-controls="hidden-menu"
-                        onClick={handleBurgerMenuButton}
-                    >
-                        <div className="burger-menu__line burger-menu__line_top"></div>
-                        <div className="burger-menu__line burger-menu__line_middle"></div>
-                        <div className="burger-menu__line burger-menu__line_bottom"></div>
+                    <div className="controls-wrapper">
+                        {/* MAIN BUTTON */}
+                        <a 
+                            href="#blog-point" 
+                            className="button main-header__button popup-link"
+                            onClick={(e) => handleHeaderMenuItem(e, "#blog-point")}
+                        >Order now</a>
+                        {/* BASKET BUTTON */}
+                        <BasketButton/>
                     </div>
-
+                    {/* BURGER BUTTON */}
+                        <div
+                            ref={burgerRef}
+                            className={`burger-menu ${isBurgerMenuOpen ? "open" : "close"}`}
+                            aria-expanded={isBurgerMenuOpen}
+                            aria-controls="hidden-menu"
+                            onClick={handleBurgerMenuButton}
+                        >
+                            <div className="burger-menu__line burger-menu__line_top"></div>
+                            <div className="burger-menu__line burger-menu__line_middle"></div>
+                            <div className="burger-menu__line burger-menu__line_bottom"></div>
+                        </div>
                     {/* HIDDEN MENU */}
                     <div className="hidden-menu" id="hidden-menu">
                         <ul className="hidden-menu__list">

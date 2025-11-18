@@ -1,3 +1,4 @@
+import Button from '../../ui/Button/Button';
 import './Proposals.scss';
 
 const Proposals = () => {
@@ -12,8 +13,7 @@ const Proposals = () => {
                             <p className="real-price">$4</p>
                             <p className="old-price">$6</p>
                         </div>
-                        <a href="#popup_order" className="button proposal-block__button popup-link">Order
-                            now</a>
+                        <Button/>
                     </div>
                 </div>
                 <div className="proposal-block proposal-block_pizza-hut scroll-animate">
@@ -24,8 +24,7 @@ const Proposals = () => {
                             <p className="real-price">$3</p>
                             <p className="old-price">$7</p>
                         </div>
-                        <a href="#popup_order" className="button proposal-block__button popup-link">Order
-                            now</a>
+                        <Button/>
                     </div>
                 </div>
                 <div className="proposal-block proposal-block_burger-king scroll-animate">
@@ -36,8 +35,7 @@ const Proposals = () => {
                             <p className="real-price">$5</p>
                             <p className="old-price">$6</p>
                         </div>
-                        <a href="#popup_order" className="button proposal-block__button popup-link">Order
-                            now</a>
+                        <Button/>
                     </div>
                 </div>
                 <div className="proposal-block proposal-block_papa-john scroll-animate">
@@ -49,8 +47,7 @@ const Proposals = () => {
                             <p className="real-price">$6</p>
                             <p className="old-price">$8</p>
                         </div>
-                        <a href="#popup_order" className="button proposal-block__button popup-link">Order
-                            now</a>
+                        <Button/>
                     </div>
                 </div>
             </div>

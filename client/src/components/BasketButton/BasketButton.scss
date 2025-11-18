@@ -1,0 +1,20 @@
+.basket-button{
+    width: 44px;
+    position: relative;
+    display: inline-block;
+
+    &__img{
+        width: inherit;
+    }
+
+    &__goods-counter{
+        padding: 3px 5px;
+        background-color: red;
+        color: #fff;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 9px;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,31 @@
+@use "../../styles/variables" as *;
+.choiсe-button {
+    position: relative;
+    width: 140px;
+    height: 50px;
+    background-color: $button-color;
+    border: 1.5px solid $button-color;
+    font-weight: 500;
+    border-radius: 5px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0 35px;
+    transition: all 0.3s;
+    &:hover{
+        color: $button-color;
+        background-color: transparent;
+    }
+}
+
+.choiсe-button::before {
+    content: url("../../assets/img/body/plus-icon.svg");
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

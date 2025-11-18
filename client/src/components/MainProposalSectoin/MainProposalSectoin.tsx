@@ -1,5 +1,6 @@
 import './MainProposalSection.scss';
 import burgerKing from '../../assets/img/main-proposal-section/burger-king.png';
+import Button from '../../ui/Button/Button';
 
 const MainProposalSectoin = () => {
     return (
@@ -19,7 +20,7 @@ const MainProposalSectoin = () => {
                             <p className="price-block__real-price">$6</p>
                             <p className="price-block__old-price">$8</p>
                         </div>
-                        <a href="#popup_order" className="button popup-link">Order now</a>
+                        <Button />
                     </div>
                 </div>
             </div>
