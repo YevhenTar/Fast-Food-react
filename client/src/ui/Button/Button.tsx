@@ -16,7 +16,7 @@ const Button = () => {
         <button 
             className="choiсe-button"
             onClick={addItem}
-        ></button>
+        />
     )
 }
 
